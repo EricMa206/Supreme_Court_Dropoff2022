@@ -1,0 +1,7 @@
+variant_name,email_tag,email_send_date,email_from,email_subject,total_sent,opens,clicks,unsubs
+email_1090088___subject_1468940,em_20210227_ak_st,2021-02-27,Senator Anne King,just getting started,65233,23271,39240,103
+email_1090088___subject_1468941,em_20210227_ak_st,2021-02-27,Senator Anne King,re: our work in the Senate,64851,22923,37305,89
+email_1090088___subject_1468942,em_20210227_ak_st,2021-02-27,Senator Anne King,"I’m kindly asking{% capture firstname3 %}{{ FirstName | sanitize }}{% endcapture %}{% if firstname3 != '' %}, {{ FirstName | sanitize }}{% else %}{% endif %}",65049,22852,35325,113
+email_1091353,em_20210227_ak_segment1,2021-02-27,Senator Anne King,"I’m kindly asking{% capture firstname3 %}{{ FirstName | sanitize }}{% endcapture %}{% if firstname3 != '' %}, {{ FirstName | sanitize }}{% else %}{% endif %}",729999,272600,695430,1496
+email_1091359,em_20210227_ak_segment2,2021-02-27,Senator Anne King,"I’m kindly asking{% capture firstname3 %}{{ FirstName | sanitize }}{% endcapture %}{% if firstname3 != '' %}, {{ FirstName | sanitize }}{% else %}{% endif %}",165467,13400,68040,332
+email_1091366,em_20210227_ak_segment3,2021-02-27,Senator Anne King,"I’m kindly asking{% capture firstname3 %}{{ FirstName | sanitize }}{% endcapture %}{% if firstname3 != '' %}, {{ FirstName | sanitize }}{% else %}{% endif %}",253025,24537,94590,650

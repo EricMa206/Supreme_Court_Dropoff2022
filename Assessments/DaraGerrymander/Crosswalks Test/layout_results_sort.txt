@@ -1,0 +1,100 @@
+/***********************************************************************************
+* name:     layout_results_sort.txt
+* purpose:  Information related to election sorted results.
+* updated:  11/03/2016
+***********************************************************************************/
+
+
+------------------------------------------------------------------------------------
+-- File layout: after January 1, 2017
+-- File format: TAB delimited
+------------------------------------------------------------------------------------
+county				text(30)	County name
+election date			text(10)	Election date (MM/DD/YYYY)
+precinct			text(12)	Precinct
+contest group id		number		Group ID of the contest (used to link contests across counties)
+contest type			text(1)		Type of contest
+contest name			text(60)	Name of the contest
+choice				text(60)	Name of the choice
+choice party			text(3)		Party of the choice
+vote for			number		Number of votes allowed to be cast for the contest
+election day			number		Number of votes with vote method of election day
+one stop			number		Number of votes with vote method of one-stop
+absentee by mail		number		Number of votes with vote method of absentee by mail
+provisional			number		Number of votes with vote method of provisional
+total votes			number		Number of votes all total
+
+------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------
+-- File layout: only November 8, 2016 election
+-- File format: ?
+------------------------------------------------------------------------------------
+Not Provided
+
+------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------
+-- File layout: between January 1, 2014 and November 1, 2016
+-- File format: TAB delimited
+------------------------------------------------------------------------------------
+county				text(30)	County name
+election date			text(10)	Election date (MM/DD/YYYY)
+VTD				text(12)	Voting tabulation district
+contest group id		number		Group ID of the contest (used to link contests across counties)
+contest type			text(1)		Type of contest
+contest name			text(60)	Name of the contest
+choice				text(60)	Name of the choice
+choice party			text(3)		Party of the choice
+vote for			number		Number of votes allowed to be cast for the contest
+election day			number		Number of votes with vote method of election day
+one stop			number		Number of votes with vote method of one-stop
+absentee by mail		number		Number of votes with vote method of absentee by mail
+provisional			number		Number of votes with vote method of provisional
+total votes			number		Number of votes all total
+
+------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------
+-- File layout: between January 1, 2010 and anuary 1, 2014
+-- File format: comma separated
+------------------------------------------------------------------------------------
+county
+VTD 
+contest_type 
+runoff_status
+recount_status			
+contest
+choice
+winner_status
+party
+election day
+one stop
+absentee by mail
+provisional 
+total votes
+district
+
+------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------
+-- File layout: between January 1, 2008 and January 1, 2010
+-- File format: comma separated
+------------------------------------------------------------------------------------
+county				text(60)	County name
+election_dt			text(10)	Date of the election
+VTD				text(60)        Voting tabulation district
+contest				text(30)	Name of the contest
+name_on_ballot        		text(30)        Name of the choice
+party_cd			text(3)		Party of the candidate
+ballot_count			number		Number of votes all total
+FTP_date			date
+
+------------------------------------------------------------------------------------
+
+
+
+
