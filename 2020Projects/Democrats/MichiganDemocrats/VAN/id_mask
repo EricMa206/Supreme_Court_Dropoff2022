@@ -1,0 +1,20 @@
+-- Conversion between INT64 and hexidecimal STRING using SQL 
+CREATE TEMP FUNCTION ToHex(x INT64) AS (
+  (SELECT STRING_AGG(FORMAT('%02x', x >> (byte * 8) & 0xff), '' ORDER BY byte DESC)
+   FROM UNNEST(GENERATE_ARRAY(0,3)) AS byte)
+);
+-- Conversion from hexidecimal STRING back to INT64
+CREATE TEMP FUNCTION FromHex(s STRING) AS (
+  (SELECT SUM(CAST(CONCAT('0x', SUBSTR(s, byte * 2 + 1, 2)) AS INT64) << ((LENGTH(s) - (byte + 1) * 2) * 4))
+   FROM UNNEST(GENERATE_ARRAY(1, LENGTH(s) / 2)) WITH OFFSET byte)
+);
+-- Use the relevant puart of the ascii character set
+WITH ascii_upper AS (
+  SELECT ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q'] as alphabet
+)
+SELECT vanid,
+  UPPER(ToHex(vanid)) AS hex,
+  (SELECT UPPER(CONCAT(REVERSE(LTRIM(ToHex(vanid), '0')), (alphabet[OFFSET(MOD(vanid, 17))])))
+    FROM ascii_upper)AS van_obf
+-- Replace here with van_id location
+FROM UNNEST([107399512, 101123456, 106543210]) AS vanid;
